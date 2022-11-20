@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\MaterialStatusImport;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 
 class MaterialStatusController extends Controller
 {
@@ -75,5 +77,15 @@ class MaterialStatusController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function materialstatusexcelfile(Request $request)
+    {
+        return view('customer.materialstatusfile');
+    }
+    public function materialstatusuploadexcel(Request $request)
+    {
+        Excel::import(new MaterialStatusImport, $request->file('excelfile'));
+        return view('customer.view-list');
     }
 }

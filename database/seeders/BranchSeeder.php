@@ -25,6 +25,7 @@ class BranchSeeder extends Seeder
             ['name' => 'خانيونس - البلد', 'bank_id' => '1'],
             ['name' => 'خانيونس - بني سهيلا ', 'bank_id' => '1'],
             ['name' => 'دير البلح', 'bank_id' => '1'],
+            ['name' => 'النصيرات', 'bank_id' => '1'],
             ['name' => 'غزة - الساحة', 'bank_id' => '1'],
             ['name' => ' غزة - الرمال', 'bank_id' => '1'],
             ['name' => 'غزة - النصر', 'bank_id' => '1'],
@@ -38,7 +39,7 @@ class BranchSeeder extends Seeder
             ['name' => 'الرمال', 'bank_id' => '2'],
             ['name' => 'جباليا', 'bank_id' => '2'],
             ['name' => 'بيت لاهيا', 'bank_id' => '2'],
-            ['name' => 'النصيرات', 'bank_id' => '2'],
+            ['name' => 'اليرموك', 'bank_id' => '2'],
 
             ['name' => 'غزة - الساحة', 'bank_id' => '3'],
             ['name' => 'غزة - النصر', 'bank_id' => '3'],
@@ -78,6 +79,21 @@ class BranchSeeder extends Seeder
             ['name' => 'غزة', 'bank_id' => '12'],
 
             ['name' => 'غزة', 'bank_id' => '13'],
+
+            ['name' => 'رفح', 'bank_id' => '14'],
+            ['name' => 'خانيونس', 'bank_id' => '14'],
+            ['name' => 'دير البلح', 'bank_id' => '14'],
+            ['name' => 'غزة - السرايا', 'bank_id' => '14'],
+            ['name' => ' غزة - الرمال', 'bank_id' => '14'],
+
+            ['name' => 'خانيونس', 'bank_id' => '15'],
+            ['name' => 'النصيرات', 'bank_id' => '15'],
+            ['name' => 'غزة', 'bank_id' => '15'],
+
+            ['name' => 'لايوجد', 'bank_id' => '16'],
+
+            ['name' => 'دير البلح', 'bank_id' => '6'],
+
 
 
 

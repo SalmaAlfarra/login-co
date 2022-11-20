@@ -3,11 +3,11 @@
     <div class="card card-custom card-stretch">
         <div class="card-header">
             <div class="card-title">
-                <h3 class="card-label">إضافة بيانات الزبائن من ملف إكسل </h3>
+                <h3 class="card-label">إضافة البيانات الشخصية للزبائن من ملف إكسل </h3>
             </div>
         </div>
         <!--begin::Form-->
-        <form action="{{route('customer.excel')}} " method="POST" enctype="multipart/form-data">
+        <form action="{{route('customer.infoexcel')}} " method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 <div class="form-group row">

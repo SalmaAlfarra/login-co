@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\WorksImport;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 
 class WorkController extends Controller
 {
@@ -75,5 +77,15 @@ class WorkController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function workexcelfile(Request $request)
+    {
+        return view('customer.workfile');
+    }
+    public function workuploadexcel(Request $request)
+    {
+        Excel::import(new WorksImport, $request->file('excelfile'));
+        return view('customer.view-list');
     }
 }

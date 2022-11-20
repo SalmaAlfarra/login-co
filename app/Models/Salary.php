@@ -13,11 +13,19 @@ class Salary extends Model
     [
         'bank_account_number',
         'salary',
+        'currency_id',
+        'bank_id',
         'branch_id',
+        'customer_id'
     ];
 
     public function customer()
     {
         return $this->hasOne(Customer::class);
+    }
+
+    public function currency()
+    {
+        return $this->hasOne(Currency::class);
     }
 }

@@ -4,9 +4,12 @@ use App\Http\Controllers\AcquaintanceController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourtController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\MaterialStatusController;
 use App\Http\Controllers\PatronController;
 use App\Http\Controllers\PoliceOfficeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SalaryController;
+use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -81,5 +84,19 @@ Route::get('/media', function () {
 Route::get('/plane', function () {
     return view('plane.create');
 });
-Route::get('/fileupload', [CustomerController::class, 'excelfile'])->name('customer.fileupload');
-Route::post('/excel', [CustomerController::class, 'uploadexcel'])->name('customer.excel');
+
+Route::get('/infofileupload', [CustomerController::class, 'infoexcelfile'])->name('customer.infofileupload');
+Route::post('/infoexcel', [CustomerController::class, 'infouploadexcel'])->name('customer.infoexcel');
+
+Route::get('/salaryfileupload', [SalaryController::class, 'salaryexcelfile'])->name('customer.salaryfileupload');
+Route::post('/salaryexcel', [SalaryController::class, 'salaryuploadexcel'])->name('customer.salaryexcel');
+
+Route::get('/materialstatusfileupload', [MaterialStatusController::class, 'materialstatusexcelfile'])->name('customer.materialstatusfileupload');
+Route::post('/materialstatusexcel', [MaterialStatusController::class, 'materialstatusuploadexcel'])->name('customer.materialstatusexcel');
+
+Route::get('/workfileupload', [WorkController::class, 'workexcelfile'])->name('customer.workfileupload');
+Route::post('/workexcel', [WorkController::class, 'workuploadexcel'])->name('customer.workexcel');
+
+Route::get('/customer-profile', function () {
+    return view('customer.customer-profile');
+});

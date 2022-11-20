@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedInteger('bank_account_number');
             $table->unsignedFloat('salary');
+            $table->foreignId('currency_id')->references('id')->on('Currencies')->nullable();
             $table->foreignId('bank_id')->references('id')->on('Banks')->nullable();
             $table->foreignId('branch_id')->references('id')->on('Branches')->nullable();
             $table->foreignId('customer_id')->references('id')->on('Customers')->nullable();

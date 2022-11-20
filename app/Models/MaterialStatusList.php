@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class Currency extends Model
+class MaterialStatusList extends Model
 {
     use HasFactory;
 
@@ -14,9 +14,10 @@ class Currency extends Model
         'name'
     ];
 
-    public function salary()
+    public function materialstatus()
     {
-        return $this->hasMany(Salary::class);
+        return $this->hasMany(MaterialStatus::class);
     }
+
 
 }

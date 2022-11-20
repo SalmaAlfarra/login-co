@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Material_Status extends Model
+class MaterialStatus extends Model
 {
     use HasFactory;
 
@@ -14,13 +14,18 @@ class Material_Status extends Model
         'marital_status',
         'partner_name',
         'partner_identification_number',
-        'partner_employer',
+        'phone',
         'partner_family_address',
-        'phone_id',
+        'customer_id',
     ];
 
     public function customer()
     {
         return $this->hasOne(Customer::class);
+    }
+
+    public function materialstatuslist()
+    {
+        return $this->hasOne(MaterialStatusList::class);
     }
 }

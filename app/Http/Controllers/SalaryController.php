@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\SalaryImport;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SalaryController extends Controller
 {
@@ -75,5 +77,15 @@ class SalaryController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function salaryexcelfile(Request $request)
+    {
+        return view('customer.salaryfile');
+    }
+    public function salaryuploadexcel(Request $request)
+    {
+        Excel::import(new SalaryImport, $request->file('excelfile'));
+        return view('customer.view-list');
     }
 }

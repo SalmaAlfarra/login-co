@@ -15,6 +15,7 @@ class Work extends Model
         'job_type',
         'employer',
         'job_status',
+        'customer_id'
     ];
     public function customer()
     {

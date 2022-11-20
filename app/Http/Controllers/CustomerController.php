@@ -214,11 +214,11 @@ class CustomerController extends Controller
     {
     }
 
-    public function excelfile(Request $request)
+    public function infoexcelfile(Request $request)
     {
-        return view('customer.file');
+        return view('customer.infofile');
     }
-    public function uploadexcel(Request $request)
+    public function infouploadexcel(Request $request)
     {
         Excel::import(new CustomersImport, $request->file('excelfile'));
         return view('customer.view-list');
