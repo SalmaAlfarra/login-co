@@ -104,7 +104,7 @@ class Customer extends Model
 
     public function work()
     {
-        return $this->belongsTo(Work::class);
+        return $this->hasOne(Work::class);
     }
 
     public function material_status()
@@ -117,8 +117,8 @@ class Customer extends Model
         return $this->hasOne(Salary::class);
     }
 
-    public function payment_mechanism()
+    public function customer_payment_mechanism()
     {
-        return $this->belongsToMany(PaymentMechanism::class);
+        return $this->hasOne(CustomerPaymentMechanisms::class);
     }
 }

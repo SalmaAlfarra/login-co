@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CustomerPaymentMechanisms;
+use App\Imports\CustomerPaymenteMechanismsImport;
+use App\Models\CustomerPaymenteMechanisms;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CustomerPaymentMechanismsController extends Controller
 {
@@ -44,7 +46,7 @@ class CustomerPaymentMechanismsController extends Controller
      * @param  \App\Models\CustomerPaymentMechanisms  $customerPaymentMechanisms
      * @return \Illuminate\Http\Response
      */
-    public function show(CustomerPaymentMechanisms $customerPaymentMechanisms)
+    public function show(CustomerPaymenteMechanisms $customerPaymentMechanisms)
     {
         //
     }
@@ -55,7 +57,7 @@ class CustomerPaymentMechanismsController extends Controller
      * @param  \App\Models\CustomerPaymentMechanisms  $customerPaymentMechanisms
      * @return \Illuminate\Http\Response
      */
-    public function edit(CustomerPaymentMechanisms $customerPaymentMechanisms)
+    public function edit(CustomerPaymenteMechanisms $customerPaymentMechanisms)
     {
         //
     }
@@ -67,7 +69,7 @@ class CustomerPaymentMechanismsController extends Controller
      * @param  \App\Models\CustomerPaymentMechanisms  $customerPaymentMechanisms
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CustomerPaymentMechanisms $customerPaymentMechanisms)
+    public function update(Request $request, CustomerPaymenteMechanisms $customerPaymentMechanisms)
     {
         //
     }
@@ -78,8 +80,20 @@ class CustomerPaymentMechanismsController extends Controller
      * @param  \App\Models\CustomerPaymentMechanisms  $customerPaymentMechanisms
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CustomerPaymentMechanisms $customerPaymentMechanisms)
+    public function destroy(CustomerPaymenteMechanisms $customerPaymentMechanisms)
     {
         //
     }
+
+    public function paymenteexcelfile(Request $request)
+    {
+        return view('customer.paymentefile');
+    }
+
+    public function paymenteuploadexcel(Request $request)
+    {
+        Excel::import(new CustomerPaymenteMechanismsImport, $request->file('excelfile'));
+        return view('customer.view-list');
+    }
+
 }

@@ -12,6 +12,7 @@ Purchase: https://1.envato.market/EA4JP
 Renew Support: https://1.envato.market/EA4JP
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
+{{-- direction="rtl" dir="rtl" style="direction: rtl" --}}
 <html lang="ar">
 	<!--begin::Head-->
 	<head>
@@ -26,16 +27,16 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{asset('admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Page Vendors Styles-->
 		<!--begin::Global Theme Styles(used by all pages)-->
-		<link href="{{asset('admin/assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('admin/assets/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('admin/assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('admin/assets/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('admin/assets/plugins/custom/prismjs/prismjs.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('admin/assets/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
-		<link href="{{asset('admin/assets/css/themes/layout/header/base/dark.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('admin/assets/css/themes/layout/header/menu/dark.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('admin/assets/css/themes/layout/brand/dark.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('admin/assets/css/themes/layout/aside/dark.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('admin/assets/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('admin/assets/css/themes/layout/header/base/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('admin/assets/css/themes/layout/header/menu/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('admin/assets/css/themes/layout/brand/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('admin/assets/css/themes/layout/aside/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('admin/assets/plugins/custom/datatables/datatables.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
         @yield('css')
 			<style>
 				.media-image {

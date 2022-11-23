@@ -4,6 +4,7 @@ use App\Http\Controllers\AcquaintanceController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourtController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\CustomerPaymentMechanismsController;
 use App\Http\Controllers\MaterialStatusController;
 use App\Http\Controllers\PatronController;
 use App\Http\Controllers\PoliceOfficeController;
@@ -96,6 +97,18 @@ Route::post('/materialstatusexcel', [MaterialStatusController::class, 'materials
 
 Route::get('/workfileupload', [WorkController::class, 'workexcelfile'])->name('customer.workfileupload');
 Route::post('/workexcel', [WorkController::class, 'workuploadexcel'])->name('customer.workexcel');
+
+Route::get('/fileupload', [CustomerController::class, 'fileupload'])->name('customer.fileupload');
+
+Route::get('/paymentfileupload', [CustomerPaymentMechanismsController::class, 'paymentexcelfile'])->name('customer.paymentfileupload');
+Route::post('/paymentexcel', [CustomerPaymentMechanismsController::class, 'paymentuploadexcel'])->name('customer.paymentexcel');
+
+Route::get('/acquaintancefileupload', [AcquaintanceController::class, 'acquaintanceexcelfile'])->name('customer.acquaintancefileupload');
+Route::post('/acquaintanceexcel', [AcquaintanceController::class, 'acquaintanceuploadexcel'])->name('customer.acquaintanceexcel');
+
+Route::get('/patronfileupload', [PatronController::class, 'patronexcelfile'])->name('customer.patronfileupload');
+Route::post('/patronexcel', [PatronController::class, 'patronuploadexcel'])->name('customer.patronexcel');
+
 
 Route::get('/customer-profile', function () {
     return view('customer.customer-profile');

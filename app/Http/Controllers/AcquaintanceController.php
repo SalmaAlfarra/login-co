@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\AcquaintanceImport;
 use App\Models\Acquaintance;
 use App\Models\City;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Contracts\Support\Renderable;
+use Maatwebsite\Excel\Facades\Excel;
 use Yajra\DataTables\Facades\DataTables;
 
 class AcquaintanceController extends Controller
@@ -164,5 +166,16 @@ class AcquaintanceController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function acquaintanceexcelfile(Request $request)
+    {
+        return view('customer.acquaintancefile');
+    }
+
+    public function acquaintanceuploadexcel(Request $request)
+    {
+        Excel::import(new AcquaintanceImport, $request->file('excelfile'));
+        return view('customer.view-list');
     }
 }

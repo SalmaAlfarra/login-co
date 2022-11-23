@@ -2,20 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class Work extends Model
+class CustomerPaymenteMechanisms extends Model
 {
     use HasFactory;
 
     protected $fillable =
     [
-        'job_title',
-        'job_type',
-        'employer',
-        'job_status',
-        'customer_id'
+        'payment_mechanisms_id',
+        'customer_id',
     ];
 
     public function customer()

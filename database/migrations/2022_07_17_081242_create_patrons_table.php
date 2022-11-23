@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('full_name')->nullable();
             $table->unsignedInteger('status')->nullable();
+            $table->unsignedInteger('file_number')->nullable();
             $table->unsignedInteger('identification_number')->nullable();
             $table->string('government_service_portal_password')->nullable();
             $table->string('address')->nullable();

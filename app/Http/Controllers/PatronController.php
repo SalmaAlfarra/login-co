@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\PatronsImport;
 use App\Models\Bank;
 use App\Models\Branch;
 use App\Models\City;
@@ -11,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Contracts\Support\Renderable;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PatronController extends Controller
 {
@@ -159,5 +161,16 @@ class PatronController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function patronexcelfile(Request $request)
+    {
+        return view('customer.patronfile');
+    }
+
+    public function patronuploadexcel(Request $request)
+    {
+        Excel::import(new PatronsImport, $request->file('excelfile'));
+        return view('customer.view-list');
     }
 }

@@ -11,7 +11,10 @@ class Patron extends Model
 
     protected $fillable =
     [
-        'name',
+        'full_name',
+        'ststus',
+        'file_number',
+        'customer_id',
         'identification_number',
         'government_service_portal_password',
         'salary',

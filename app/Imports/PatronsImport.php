@@ -2,10 +2,10 @@
 
 namespace App\Imports;
 
-use App\Models\CustomerPaymentMechanisms;
+use App\Models\Patron;
 use Maatwebsite\Excel\Concerns\ToModel;
 
-class CustomerPaymentMechanismsImport implements ToModel
+class PatronsImport implements ToModel
 {
     /**
     * @param array $row
@@ -14,8 +14,11 @@ class CustomerPaymentMechanismsImport implements ToModel
     */
     public function model(array $row)
     {
-        return new CustomerPaymentMechanisms([
+        return new Patron([
             //
+            'full_name'    => $row[0],
+            'file_number'  => $row[1],
+            'customer_id'  => $row[2],
         ]);
     }
 }
