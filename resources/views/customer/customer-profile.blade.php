@@ -40,7 +40,7 @@
                             <!--begin::Pic-->
                             <div class="flex-shrink-0 mr-7">
                                 <div class="symbol symbol-50 symbol-lg-120">
-                                    <img alt="Pic" src="assets/media//users/300_1.jpg">
+                                    <img alt="Pic" src="{{asset('admin/assets/media//users/300_1.jpg')}}">
                                 </div>
                             </div>
                             <!--end::Pic-->
