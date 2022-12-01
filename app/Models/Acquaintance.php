@@ -12,7 +12,6 @@ class Acquaintance extends Model
     protected $fillable =
     [
         'name',
-        'identification_number',
         'relationship',
         'address',
         'phone',

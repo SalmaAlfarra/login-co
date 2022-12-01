@@ -17,7 +17,7 @@
                                         <tr>
                                             <th></th>
                                             <th>name</th>
-                                            <th>identification_number</th>
+                                            <th>phone</th>
                                             <th>Action</th>
 
                                         </tr>
@@ -73,8 +73,8 @@
                                     name: 'name'
                                 },
                                 {
-                                    data: 'identification_number',
-                                    name: 'identification_number'
+                                    data: 'phone',
+                                    name: 'phone'
                                 },
                                 {
                                     data: 'action',
