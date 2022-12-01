@@ -7,14 +7,14 @@
                 <!--begin::Details-->
                 <div class="d-flex align-items-center flex-wrap mr-2">
                     <!--begin::Title-->
-                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">View Contact</h5>
+                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">#</h5>
                     <!--end::Title-->
                     <!--begin::Separator-->
                     <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
                     <!--end::Separator-->
                     <!--begin::Search Form-->
                     <div class="d-flex align-items-center" id="kt_subheader_search">
-                        <span class="text-dark-50 font-weight-bold" id="kt_subheader_total">Sandra Stone</span>
+                        <span class="text-dark-50 font-weight-bold" id="kt_subheader_total">{{$customer->full_name}}</span>
                     </div>
                     <!--end::Search Form-->
                 </div>
@@ -35,7 +35,7 @@
             <div class="container">
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b">
-                    <div class="card-body">
+                    {{-- <div class="card-body">
                         <div class="d-flex">
                             <!--begin::Pic-->
                             <div class="flex-shrink-0 mr-7">
@@ -236,12 +236,12 @@
                             </div>
                             <!--end::Info-->
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <!--end::Card-->
                 <!--begin::Row-->
                 <div class="row">
-                    <div class="col-xl-4">
+                    {{-- <div class="col-xl-4">
                         <!--begin::Card-->
                         <div class="card card-custom gutter-b">
                             <div class="card-header h-auto py-3 border-0">
@@ -406,15 +406,15 @@
                             <!--end::Footer-->
                         </div>
                         <!--end::Card-->
-                    </div>
-                    <div class="col-xl-8">
+                    </div> --}}
+                    <div class="col-xl-12">
                         <!--begin::Card-->
                         <div class="card card-custom gutter-b">
                             <!--begin::Header-->
                             <div class="card-header card-header-tabs-line">
                                 <div class="card-toolbar">
                                     <ul class="nav nav-tabs nav-tabs-space-lg nav-tabs-line nav-bold nav-tabs-line-3x" role="tablist">
-                                        <li class="nav-item">
+                                       {{--  <li class="nav-item">
                                             <a class="nav-link active" data-toggle="tab" href="#kt_apps_contacts_view_tab_1">
                                                 <span class="nav-icon mr-2">
                                                     <span class="svg-icon mr-3">
@@ -431,8 +431,8 @@
                                                 </span>
                                                 <span class="nav-text">Notes</span>
                                             </a>
-                                        </li>
-                                        <li class="nav-item mr-3">
+                                        </li> --}}
+                                       {{--  <li class="nav-item mr-3">
                                             <a class="nav-link" data-toggle="tab" href="#kt_apps_contacts_view_tab_2">
                                                 <span class="nav-icon mr-2">
                                                     <span class="svg-icon mr-3">
@@ -449,8 +449,8 @@
                                                 </span>
                                                 <span class="nav-text">Contact Details</span>
                                             </a>
-                                        </li>
-                                        <li class="nav-item mr-3">
+                                        </li> --}}
+                                        {{-- <li class="nav-item mr-3">
                                             <a class="nav-link" data-toggle="tab" href="#kt_apps_contacts_view_tab_3">
                                                 <span class="nav-icon mr-2">
                                                     <span class="svg-icon mr-3">
@@ -467,8 +467,8 @@
                                                 </span>
                                                 <span class="nav-text">Access Control</span>
                                             </a>
-                                        </li>
-                                        <li class="nav-item mr-3">
+                                        </li> --}}
+                                       {{--  <li class="nav-item mr-3">
                                             <a class="nav-link" data-toggle="tab" href="#kt_apps_contacts_view_tab_4">
                                                 <span class="nav-icon mr-2">
                                                     <span class="svg-icon mr-3">
@@ -485,7 +485,7 @@
                                                 </span>
                                                 <span class="nav-text">Settings</span>
                                             </a>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </div>
                             </div>
@@ -493,7 +493,7 @@
                             <!--begin::Body-->
                             <div class="card-body px-0">
                                 <div class="tab-content pt-5">
-                                    <!--begin::Tab Content-->
+                                    {{-- <!--begin::Tab Content-->
                                     <div class="tab-pane active" id="kt_apps_contacts_view_tab_1" role="tabpanel">
                                         <div class="container">
                                             <form class="form">
@@ -800,37 +800,70 @@
                                             <!--end::Timeline-->
                                         </div>
                                     </div>
-                                    <!--end::Tab Content-->
+                                    <!--end::Tab Content--> --}}
                                     <!--begin::Tab Content-->
-                                    <div class="tab-pane" id="kt_apps_contacts_view_tab_2" role="tabpanel">
+                                    <div class="tab-pane active" id="kt_apps_contacts_view_tab_2" role="tabpanel">
                                         <form class="form">
                                             <div class="row">
                                                 <div class="col-lg-9 col-xl-6 offset-xl-3">
-                                                    <h3 class="font-size-h6 mb-5">Contact Info:</h3>
+                                                    <h3 class="font-size-h6 mb-5">بيانات العمبل</h3>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">Contact Name</label>
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم ملف العميل</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="Nick">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->file_number}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">Contact Owner</label>
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">اسم العميل</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="Bold">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->full_name}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">Customer Name</label>
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم الهوية</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="Loop Inc.">
-                                                    <span class="form-text text-muted">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->identification_number}}">
                                                 </div>
                                             </div>
-                                            <div class="separator separator-dashed my-10"></div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم التسجيل الموحد</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->government_service_portal_password}}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">العنوان</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->address}}">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">المدينة</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->City->name}}">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">مركز الشرطة</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->police_office_id}}">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">المحكمة</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->Court->name}}">
+
+                                                </div>
+                                            </div>
+                                            {{-- <div class="separator separator-dashed my-10"></div> --}}
                                             <!--begin::Heading-->
-                                            <div class="row">
+                                           {{--  <div class="row">
                                                 <div class="col-lg-9 col-xl-6 offset-xl-3">
                                                     <h3 class="font-size-h6 mb-5">Contact Info:</h3>
                                                 </div>
@@ -873,11 +906,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </form>
                                     </div>
                                     <!--end::Tab Content-->
-                                    <!--begin::Tab Content-->
+                                    {{-- <!--begin::Tab Content-->
                                     <div class="tab-pane" id="kt_apps_contacts_view_tab_3" role="tabpanel">
                                         <form class="form">
                                             <div class="row">
@@ -1187,8 +1220,8 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <!--end::Tab Content-->
-                                    <!--begin::Tab Content-->
+                                    <!--end::Tab Content--> --}}
+                                   {{--  <!--begin::Tab Content-->
                                     <div class="tab-pane" id="kt_apps_contacts_view_tab_4" role="tabpanel">
                                         <form class="form">
                                             <!--begin::Heading-->
@@ -1292,7 +1325,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <!--end::Tab Content-->
+                                    <!--end::Tab Content--> --}}
                                 </div>
                             </div>
                             <!--end::Body-->
