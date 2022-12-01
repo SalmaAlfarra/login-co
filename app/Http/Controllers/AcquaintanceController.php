@@ -24,7 +24,7 @@ class AcquaintanceController extends Controller
          $data =Acquaintance::select([
          'id',
          'name',
-         'identification_number',
+         'phone',
          ]);
          return DataTables::of($data)
          ->addIndexColumn()
@@ -85,11 +85,7 @@ class AcquaintanceController extends Controller
     {
         /* dd($request); */
         $request->validate([
-            'first_name' => 'required|min:3|max:255',
-            'father_name' => 'required|min:3|max:255',
-            'grandfather_name' => 'required|min:3|max:255',
-            'family_name' => 'required|min:3|max:255',
-            'identification_number' => 'required|numeric',
+            'name' => 'required|min:3|max:255',
             'relationship' => 'required|min:3|max:255',
             'address' => 'required|min:3|max:255',
             'phone' => 'required|numeric',
@@ -98,11 +94,7 @@ class AcquaintanceController extends Controller
         ]);
 
         $add = Acquaintance::create([
-            'first_name' => $request->first_name,
-            'father_name' => $request->father_name,
-            'grandfather_name' => $request->grandfather_name,
-            'family_name' => $request->family_name,
-            'identification_number' => $request->identification_number,
+            'name' => $request->name,
             'relationship' => $request->relationship,
             'address' => $request->address,
             'phone' => $request->phone,
