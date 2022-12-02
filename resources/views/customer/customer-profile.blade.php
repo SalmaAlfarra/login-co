@@ -854,16 +854,18 @@
 
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
+
+                                            {{-- <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">المحكمة</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->Court->name}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->Court->id}}">
 
                                                 </div>
-                                            </div>
+                                            </div> --}}
+
                                             {{-- <div class="separator separator-dashed my-10"></div> --}}
                                             <!--begin::Heading-->
-                                           {{--  <div class="row">
+                                        {{--<div class="row">
                                                 <div class="col-lg-9 col-xl-6 offset-xl-3">
                                                     <h3 class="font-size-h6 mb-5">Contact Info:</h3>
                                                 </div>
