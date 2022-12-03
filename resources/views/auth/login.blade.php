@@ -23,9 +23,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
-		<!--begin::Page Vendors Styles(used by this page)-->
-		<link href="{{asset('admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<!--end::Page Vendors Styles-->
+        <!--begin::Page Custom Styles(used by this page)-->
+		<link href="{{asset('admin/assets/css/pages/login/classic/login-5.css')}}" rel="stylesheet" type="text/css" />
+		<!--end::Page Custom Styles-->
 		<!--begin::Global Theme Styles(used by all pages)-->
 		<link href="{{asset('admin/assets/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('admin/assets/plugins/custom/prismjs/prismjs.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
@@ -36,7 +36,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{asset('admin/assets/css/themes/layout/header/menu/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('admin/assets/css/themes/layout/brand/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('admin/assets/css/themes/layout/aside/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
-        
+
         @yield('css')
 			<style>
 				.media-image {

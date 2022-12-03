@@ -113,9 +113,6 @@ Route::post('/patronexcel', [PatronController::class, 'patronuploadexcel'])->nam
 Route::get('/customer-profile', function () {
     return view('customer.customer-profile');
 });
-Route::get('/', function () {
-return view('welcome');
-});
 
 Route::get('/dashboard', function () {
 return view('dashboard');
