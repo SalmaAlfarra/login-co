@@ -132,24 +132,6 @@
                                                 <span class="nav-text">بيانات العميل </span>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#kt_apps_contacts_view_tab_1">
-                                                <span class="nav-icon mr-2">
-                                                    <span class="svg-icon mr-3">
-                                                        <!--begin::Svg Icon | path:assets/media/svg/icons/General/Notification2.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <rect x="0" y="0" width="24" height="24"></rect>
-                                                                <path d="M13.2070325,4 C13.0721672,4.47683179 13,4.97998812 13,5.5 C13,8.53756612 15.4624339,11 18.5,11 C19.0200119,11 19.5231682,10.9278328 20,10.7929675 L20,17 C20,18.6568542 18.6568542,20 17,20 L7,20 C5.34314575,20 4,18.6568542 4,17 L4,7 C4,5.34314575 5.34314575,4 7,4 L13.2070325,4 Z" fill="#000000"></path>
-                                                                <circle fill="#000000" opacity="0.3" cx="18.5" cy="5.5" r="2.5"></circle>
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                </span>
-                                                <span class="nav-text">ملاحظات</span>
-                                            </a>
-                                        </li>
                                         <li class="nav-item mr-3">
                                             <a class="nav-link" data-toggle="tab" href="#kt_apps_contacts_view_tab_3">
                                                 <span class="nav-icon mr-2">
@@ -198,38 +180,13 @@
                                         <form class="form">
                                             <div class="row">
                                                 <div class="col-lg-9 col-xl-6 offset-xl-3">
-                                                    <h3 class="font-size-h6 mb-5">بيانات العمبل</h3>
+                                                    <h3 class="font-size-h6 mb-5">البيانات الشخصية</h3>
                                                 </div>
                                             </div>
-                                            {{-- <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم ملف العميل</label>
-                                                <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->file_number}}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">اسم العميل</label>
-                                                <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->full_name}}">
-                                                </div>
-                                            </div> --}}
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم الهوية</label>
                                                 <div class="col-lg-9 col-xl-6">
                                                     <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->identification_number}}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم التسجيل الموحد</label>
-                                                <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->government_service_portal_password}}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">العنوان</label>
-                                                <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->address}}">
-
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -239,42 +196,198 @@
 
                                                 </div>
                                             </div>
-                                            {{-- <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">مركز الشرطة</label>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم التسجيل الموحد</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->police_office_id}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->government_service_portal_password}}">
+                                                </div>
+                                            </div>
+                                            <div class="separator separator-dashed my-10"></div>
+                                        </form>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-xl-6 offset-xl-3">
+                                                    <h3 class="font-size-h6 mb-5">الحالة الاجتماعية </h3>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">الحالة الاجتماعية</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
 
                                                 </div>
                                             </div>
-
                                             <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">المحكمة</label>
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">اسم الزوج/ة</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->Court->id}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم جوال الزوج/ة</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">عنوان أهل الزوج/ة</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
 
                                                 </div>
-                                            </div> --}}
-
+                                            </div>
                                             <div class="separator separator-dashed my-10"></div>
                                         </form>
-                                    </div>
-                                    <!--end::Tab Content-->
-                                    <!--begin::Tab Content-->
-                                    <div class="tab-pane active" id="kt_apps_contacts_view_tab_1" role="tabpanel">
-                                        <div class="container">
-                                            <form class="form">
-                                                <div class="form-group">
-                                                    <textarea class="form-control form-control-lg form-control-solid" id="exampleTextarea" rows="3" placeholder="Type notes"></textarea>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-xl-6 offset-xl-3">
+                                                    <h3 class="font-size-h6 mb-5">بيانات العمل</h3>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <a href="#" class="btn btn-light-primary font-weight-bold">Add notes</a>
-                                                        <a href="#" class="btn btn-clean font-weight-bold">Cancel</a>
-                                                    </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">المسمى الوظيفي </label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
                                                 </div>
-                                            </form>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">نوع الوظيفة</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">جهة العمل</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">المرتب</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+
+                                                </div>
+                                            </div>
                                             <div class="separator separator-dashed my-10"></div>
-                                        </div>
+                                        </form>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-xl-6 offset-xl-3">
+                                                    <h3 class="font-size-h6 mb-5">بيانات البنك</h3>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">البنك</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right"></label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">الفرع</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم الحساب </label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">المرتب</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+
+                                                </div>
+                                            </div>
+                                            <div class="separator separator-dashed my-10"></div>
+                                        </form>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-xl-6 offset-xl-3">
+                                                    <h3 class="font-size-h6 mb-5">الية السداد</h3>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">الية السداد</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="separator separator-dashed my-10"></div>
+                                        </form>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-xl-6 offset-xl-3">
+                                                    <h3 class="font-size-h6 mb-5">بيانات المعرفين</h3>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">الاسم</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">صلة القرابة</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم الجوال</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">المدينة</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">العنوان</label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+
+                                                </div>
+                                            </div>
+                                            <div class="separator separator-dashed my-10"></div>
+                                        </form>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-xl-6 offset-xl-3">
+                                                    <h3 class="font-size-h6 mb-5">بيانات الكفلاء</h3>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">الاسم </label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم الملف </label>
+                                                <div class="col-lg-9 col-xl-6">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="separator separator-dashed my-10"></div>
+                                        </form>
                                     </div>
                                     <!--end::Tab Content-->
                                     <!--begin::Tab Content-->
