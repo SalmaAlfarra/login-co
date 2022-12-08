@@ -35,14 +35,14 @@
             <div class="container">
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b">
-                    {{-- <div class="card-body">
+                    <div class="card-body">
                         <div class="d-flex">
                             <!--begin::Pic-->
-                            <div class="flex-shrink-0 mr-7">
+                            {{-- <div class="flex-shrink-0 mr-7">
                                 <div class="symbol symbol-50 symbol-lg-120">
                                     <img alt="Pic" src="{{asset('admin/assets/media//users/300_1.jpg')}}">
                                 </div>
-                            </div>
+                            </div> --}}
                             <!--end::Pic-->
                             <!--begin: Info-->
                             <div class="flex-grow-1">
@@ -52,69 +52,12 @@
                                     <div class="mr-3">
                                         <div class="d-flex align-items-center mr-3">
                                             <!--begin::Name-->
-                                            <a href="#" class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">David Smith</a>
+                                            <a class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">{{$customer->full_name}}</a>
                                             <!--end::Name-->
-                                            <span class="label label-light-success label-inline font-weight-bolder mr-1">Customer</span>
-                                            <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="left">
-                                                <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="fa fa-caret-down"></i>
-                                                </a>
-                                                <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
-                                                    <!--begin::Navigation-->
-                                                    <ul class="navi navi-hover">
-                                                        <li class="navi-header font-weight-bold py-4">
-                                                            <span class="font-size-lg">Choose Label:</span>
-                                                            <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-                                                        </li>
-                                                        <li class="navi-separator mb-3 opacity-70"></li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-text">
-                                                                    <span class="label label-xl label-inline label-light-success">Customer</span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-text">
-                                                                    <span class="label label-xl label-inline label-light-danger">Partner</span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-text">
-                                                                    <span class="label label-xl label-inline label-light-warning">Suplier</span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-text">
-                                                                    <span class="label label-xl label-inline label-light-primary">Member</span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-text">
-                                                                    <span class="label label-xl label-inline label-light-dark">Staff</span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="navi-separator mt-3 opacity-70"></li>
-                                                        <li class="navi-footer py-4">
-                                                            <a class="btn btn-clean font-weight-bold btn-sm" href="#">
-                                                            <i class="ki ki-plus icon-sm"></i>Add new</a>
-                                                        </li>
-                                                    </ul>
-                                                    <!--end::Navigation-->
-                                                </div>
-                                            </div>
                                         </div>
                                         <!--begin::Contacts-->
                                         <div class="d-flex flex-wrap my-2">
-                                            <a href="#" class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                            <a  class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
                                             <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
                                                 <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-notification.svg-->
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -126,7 +69,7 @@
                                                 </svg>
                                                 <!--end::Svg Icon-->
                                             </span>david.s@loop.com</a>
-                                            <a href="#" class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                            <a class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
                                             <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
                                                 <!--begin::Svg Icon | path:assets/media/svg/icons/General/Lock.svg-->
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -139,8 +82,8 @@
                                                     </g>
                                                 </svg>
                                                 <!--end::Svg Icon-->
-                                            </span>PR Manager</a>
-                                            <a href="#" class="text-muted text-hover-primary font-weight-bold">
+                                            </span>{{$customer->file_number}}</a>
+                                            <a class="text-muted text-hover-primary font-weight-bold">
                                             <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
                                                 <!--begin::Svg Icon | path:assets/media/svg/icons/Map/Marker2.svg-->
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -150,263 +93,20 @@
                                                     </g>
                                                 </svg>
                                                 <!--end::Svg Icon-->
-                                            </span>Melbourne</a>
+                                            </span>{{$customer->address}}</a>
                                         </div>
                                         <!--end::Contacts-->
                                     </div>
                                     <!--begin::User-->
-                                    <!--begin::Actions-->
-                                    <div class="mb-10">
-                                        <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder text-uppercase mr-2">contact</a>
-                                        <div class="dropdown dropdown-inline">
-                                            <a href="#" class="btn btn-primary btn-sm font-weight-bolder text-uppercase dropdown-toggle" data-toggle="dropdown" aria-expanded="false">export</a>
-                                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
-                                                <!--begin::Navigation-->
-                                                <ul class="navi navi-hover">
-                                                    <li class="navi-header font-weight-bold py-4">
-                                                        <span class="font-size-lg">Choose Label:</span>
-                                                        <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-                                                    </li>
-                                                    <li class="navi-separator mb-3 opacity-70"></li>
-                                                    <li class="navi-item">
-                                                        <a href="#" class="navi-link">
-                                                            <span class="navi-text">
-                                                                <span class="label label-xl label-inline label-light-success">Customer</span>
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="navi-item">
-                                                        <a href="#" class="navi-link">
-                                                            <span class="navi-text">
-                                                                <span class="label label-xl label-inline label-light-danger">Partner</span>
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="navi-item">
-                                                        <a href="#" class="navi-link">
-                                                            <span class="navi-text">
-                                                                <span class="label label-xl label-inline label-light-warning">Suplier</span>
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="navi-item">
-                                                        <a href="#" class="navi-link">
-                                                            <span class="navi-text">
-                                                                <span class="label label-xl label-inline label-light-primary">Member</span>
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="navi-item">
-                                                        <a href="#" class="navi-link">
-                                                            <span class="navi-text">
-                                                                <span class="label label-xl label-inline label-light-dark">Staff</span>
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="navi-separator mt-3 opacity-70"></li>
-                                                    <li class="navi-footer py-4">
-                                                        <a class="btn btn-clean font-weight-bold btn-sm" href="#">
-                                                        <i class="ki ki-plus icon-sm"></i>Add new</a>
-                                                    </li>
-                                                </ul>
-                                                <!--end::Navigation-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end::Actions-->
                                 </div>
                                 <!--end::Title-->
-                                <!--begin::Content-->
-                                <div class="d-flex align-items-center flex-wrap justify-content-between">
-                                    <!--begin::Description-->
-                                    <div class="flex-grow-1 font-weight-bold text-dark-50 py-2 py-lg-2 mr-5">I distinguish three main text objectives could be merely to inform people.
-                                    <br>A second could be persuade people. You want people to bay objective.</div>
-                                    <!--end::Description-->
-                                    <!--begin::Progress-->
-                                    <div class="d-flex mt-4 mt-sm-0">
-                                        <span class="font-weight-bold mr-4">Progress</span>
-                                        <div class="progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-500px">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width: 63%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="font-weight-bolder text-dark ml-4">78%</span>
-                                    </div>
-                                    <!--end::Progress-->
-                                </div>
-                                <!--end::Content-->
-                            </div>
                             <!--end::Info-->
                         </div>
-                    </div> --}}
+                    </div>
                 </div>
                 <!--end::Card-->
                 <!--begin::Row-->
                 <div class="row">
-                    {{-- <div class="col-xl-4">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header h-auto py-3 border-0">
-                                <div class="card-title">
-                                    <h3 class="card-label text-danger">Important Notice</h3>
-                                </div>
-                                <div class="card-toolbar">
-                                    <span class="label font-weight-bold label label-inline label-light-danger">Now</span>
-                                </div>
-                            </div>
-                            <div class="card-body pt-2">
-                                <p class="text-dark-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                <div class="mt-5">
-                                    <a href="#" class="btn btn-success btn-sm font-weight-bold mr-2">Set up</a>
-                                    <a href="#" class="btn btn-clean btn-sm font-weight-bold">Dismiss</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                        <!--begin::Card-->
-                        <div class="card card-custom">
-                            <!--begin::Header-->
-                            <div class="card-header h-auto py-4">
-                                <div class="card-title">
-                                    <h3 class="card-label">Company
-                                    <span class="d-block text-muted pt-2 font-size-sm">company profile preview</span></h3>
-                                </div>
-                                <div class="card-toolbar">
-                                    <a href="#" class="btn btn-default btn-sm font-weight-bold" data-toggle="dropdown">
-                                    <i class="flaticon2-gear"></i>Export</a>
-                                    <div class="dropdown-menu dropdown-menu-right p-0 m-0 dropdown-menu-md">
-                                        <!--begin::Navigation-->
-                                        <ul class="navi navi-hover py-5">
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-drop"></i>
-                                                    </span>
-                                                    <span class="navi-text">New Group</span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-list-3"></i>
-                                                    </span>
-                                                    <span class="navi-text">Contacts</span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-rocket-1"></i>
-                                                    </span>
-                                                    <span class="navi-text">Groups</span>
-                                                    <span class="navi-link-badge">
-                                                        <span class="label label-light-primary label-inline font-weight-bold">new</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-bell-2"></i>
-                                                    </span>
-                                                    <span class="navi-text">Calls</span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-gear"></i>
-                                                    </span>
-                                                    <span class="navi-text">Settings</span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-separator my-3"></li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-magnifier-tool"></i>
-                                                    </span>
-                                                    <span class="navi-text">Help</span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-bell-2"></i>
-                                                    </span>
-                                                    <span class="navi-text">Privacy</span>
-                                                    <span class="navi-link-badge">
-                                                        <span class="label label-light-danger label-rounded font-weight-bold">5</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <!--end::Navigation-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end::Header-->
-                            <!--begin::Body-->
-                            <div class="card-body py-4">
-                                <div class="form-group row my-2">
-                                    <label class="col-4 col-form-label">Name:</label>
-                                    <div class="col-8">
-                                        <span class="form-control-plaintext font-weight-bolder">Loop Inc.</span>
-                                    </div>
-                                </div>
-                                <div class="form-group row my-2">
-                                    <label class="col-4 col-form-label">Location:</label>
-                                    <div class="col-8">
-                                        <span class="form-control-plaintext font-weight-bolder">London, UK.</span>
-                                    </div>
-                                </div>
-                                <div class="form-group row my-2">
-                                    <label class="col-4 col-form-label">Revenue:</label>
-                                    <div class="col-8">
-                                        <span class="form-control-plaintext">
-                                        <span class="font-weight-bolder">345,000M</span>&nbsp;
-                                        <span class="label label-inline label-danger label-bold">Q4, 2019</span></span>
-                                    </div>
-                                </div>
-                                <div class="form-group row my-2">
-                                    <label class="col-4 col-form-label">Phone:</label>
-                                    <div class="col-8">
-                                        <span class="form-control-plaintext font-weight-bolder">+456 7890456</span>
-                                    </div>
-                                </div>
-                                <div class="form-group row my-2">
-                                    <label class="col-4 col-form-label">Email:</label>
-                                    <div class="col-8">
-                                        <span class="form-control-plaintext font-weight-bolder">
-                                            <a href="#">info@loop.com</a>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="form-group row my-2">
-                                    <label class="col-4 col-form-label">Website:</label>
-                                    <div class="col-8">
-                                        <span class="form-control-plaintext font-weight-bolder">
-                                            <a href="#">www.loop.com</a>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="form-group row my-2">
-                                    <label class="col-4 col-form-label">Contact Person:</label>
-                                    <div class="col-8">
-                                        <span class="form-control-plaintext font-weight-bolder">
-                                            <a href="#">Nick Bold</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end::Body-->
-                            <!--begin::Footer-->
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-primary font-weight-bold mr-2">Manage company</a>
-                                <a href="#" class="btn btn-light-primary font-weight-bold">Learn more</a>
-                            </div>
-                            <!--end::Footer-->
-                        </div>
-                        <!--end::Card-->
-                    </div> --}}
                     <div class="col-xl-12">
                         <!--begin::Card-->
                         <div class="card card-custom gutter-b">
@@ -414,25 +114,7 @@
                             <div class="card-header card-header-tabs-line">
                                 <div class="card-toolbar">
                                     <ul class="nav nav-tabs nav-tabs-space-lg nav-tabs-line nav-bold nav-tabs-line-3x" role="tablist">
-                                       {{--  <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#kt_apps_contacts_view_tab_1">
-                                                <span class="nav-icon mr-2">
-                                                    <span class="svg-icon mr-3">
-                                                        <!--begin::Svg Icon | path:assets/media/svg/icons/General/Notification2.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <rect x="0" y="0" width="24" height="24"></rect>
-                                                                <path d="M13.2070325,4 C13.0721672,4.47683179 13,4.97998812 13,5.5 C13,8.53756612 15.4624339,11 18.5,11 C19.0200119,11 19.5231682,10.9278328 20,10.7929675 L20,17 C20,18.6568542 18.6568542,20 17,20 L7,20 C5.34314575,20 4,18.6568542 4,17 L4,7 C4,5.34314575 5.34314575,4 7,4 L13.2070325,4 Z" fill="#000000"></path>
-                                                                <circle fill="#000000" opacity="0.3" cx="18.5" cy="5.5" r="2.5"></circle>
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                </span>
-                                                <span class="nav-text">Notes</span>
-                                            </a>
-                                        </li> --}}
-                                       {{--  <li class="nav-item mr-3">
+                                        <li class="nav-item mr-3">
                                             <a class="nav-link" data-toggle="tab" href="#kt_apps_contacts_view_tab_2">
                                                 <span class="nav-icon mr-2">
                                                     <span class="svg-icon mr-3">
@@ -447,10 +129,28 @@
                                                         <!--end::Svg Icon-->
                                                     </span>
                                                 </span>
-                                                <span class="nav-text">Contact Details</span>
+                                                <span class="nav-text">بيانات العميل </span>
                                             </a>
-                                        </li> --}}
-                                        {{-- <li class="nav-item mr-3">
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#kt_apps_contacts_view_tab_1">
+                                                <span class="nav-icon mr-2">
+                                                    <span class="svg-icon mr-3">
+                                                        <!--begin::Svg Icon | path:assets/media/svg/icons/General/Notification2.svg-->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                                <path d="M13.2070325,4 C13.0721672,4.47683179 13,4.97998812 13,5.5 C13,8.53756612 15.4624339,11 18.5,11 C19.0200119,11 19.5231682,10.9278328 20,10.7929675 L20,17 C20,18.6568542 18.6568542,20 17,20 L7,20 C5.34314575,20 4,18.6568542 4,17 L4,7 C4,5.34314575 5.34314575,4 7,4 L13.2070325,4 Z" fill="#000000"></path>
+                                                                <circle fill="#000000" opacity="0.3" cx="18.5" cy="5.5" r="2.5"></circle>
+                                                            </g>
+                                                        </svg>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                </span>
+                                                <span class="nav-text">ملاحظات</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item mr-3">
                                             <a class="nav-link" data-toggle="tab" href="#kt_apps_contacts_view_tab_3">
                                                 <span class="nav-icon mr-2">
                                                     <span class="svg-icon mr-3">
@@ -465,10 +165,10 @@
                                                         <!--end::Svg Icon-->
                                                     </span>
                                                 </span>
-                                                <span class="nav-text">Access Control</span>
+                                                <span class="nav-text">البيانات المالية</span>
                                             </a>
-                                        </li> --}}
-                                       {{--  <li class="nav-item mr-3">
+                                        </li>
+                                        <li class="nav-item mr-3">
                                             <a class="nav-link" data-toggle="tab" href="#kt_apps_contacts_view_tab_4">
                                                 <span class="nav-icon mr-2">
                                                     <span class="svg-icon mr-3">
@@ -483,9 +183,9 @@
                                                         <!--end::Svg Icon-->
                                                     </span>
                                                 </span>
-                                                <span class="nav-text">Settings</span>
+                                                <span class="nav-text">البيانات القانونية </span>
                                             </a>
-                                        </li> --}}
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -493,314 +193,6 @@
                             <!--begin::Body-->
                             <div class="card-body px-0">
                                 <div class="tab-content pt-5">
-                                    {{-- <!--begin::Tab Content-->
-                                    <div class="tab-pane active" id="kt_apps_contacts_view_tab_1" role="tabpanel">
-                                        <div class="container">
-                                            <form class="form">
-                                                <div class="form-group">
-                                                    <textarea class="form-control form-control-lg form-control-solid" id="exampleTextarea" rows="3" placeholder="Type notes"></textarea>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <a href="#" class="btn btn-light-primary font-weight-bold">Add notes</a>
-                                                        <a href="#" class="btn btn-clean font-weight-bold">Cancel</a>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                            <div class="separator separator-dashed my-10"></div>
-                                            <!--begin::Timeline-->
-                                            <div class="timeline timeline-3">
-                                                <div class="timeline-items">
-                                                    <div class="timeline-item">
-                                                        <div class="timeline-media">
-                                                            <img alt="Pic" src="assets/media/users/300_25.jpg">
-                                                        </div>
-                                                        <div class="timeline-content">
-                                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="mr-2">
-                                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold">New order has been placed</a>
-                                                                    <span class="text-muted ml-2">Today</span>
-                                                                    <span class="label label-light-success font-weight-bolder label-inline ml-2">new</span>
-                                                                </div>
-                                                                <div class="dropdown ml-2" data-toggle="tooltip" title="Quick actions" data-placement="left">
-                                                                    <a href="#" class="btn btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                        <i class="ki ki-more-hor icon-md"></i>
-                                                                    </a>
-                                                                    <div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
-                                                                        <!--begin::Navigation-->
-                                                                        <ul class="navi navi-hover">
-                                                                            <li class="navi-header font-weight-bold py-4">
-                                                                                <span class="font-size-lg">Choose Label:</span>
-                                                                                <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-                                                                            </li>
-                                                                            <li class="navi-separator mb-3 opacity-70"></li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-success">Customer</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-danger">Partner</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-warning">Suplier</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-primary">Member</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-dark">Staff</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-separator mt-3 opacity-70"></li>
-                                                                            <li class="navi-footer py-4">
-                                                                                <a class="btn btn-clean font-weight-bold btn-sm" href="#">
-                                                                                <i class="ki ki-plus icon-sm"></i>Add new</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                        <!--end::Navigation-->
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <p class="p-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-item">
-                                                        <div class="timeline-media">
-                                                            <i class="flaticon2-shield text-danger"></i>
-                                                        </div>
-                                                        <div class="timeline-content">
-                                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="mr-2">
-                                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold">Member has sent a request.</a>
-                                                                    <span class="text-muted ml-2">8:30PM 20 June</span>
-                                                                    <span class="label label-light-danger font-weight-bolder label-inline ml-2">pending</span>
-                                                                </div>
-                                                                <div class="dropdown ml-2" data-toggle="tooltip" title="Quick actions" data-placement="left">
-                                                                    <a href="#" class="btn btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                        <i class="ki ki-more-hor icon-md"></i>
-                                                                    </a>
-                                                                    <div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
-                                                                        <!--begin::Navigation-->
-                                                                        <ul class="navi navi-hover">
-                                                                            <li class="navi-header font-weight-bold py-4">
-                                                                                <span class="font-size-lg">Choose Label:</span>
-                                                                                <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-                                                                            </li>
-                                                                            <li class="navi-separator mb-3 opacity-70"></li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-success">Customer</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-danger">Partner</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-warning">Suplier</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-primary">Member</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-dark">Staff</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-separator mt-3 opacity-70"></li>
-                                                                            <li class="navi-footer py-4">
-                                                                                <a class="btn btn-clean font-weight-bold btn-sm" href="#">
-                                                                                <i class="ki ki-plus icon-sm"></i>Add new</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                        <!--end::Navigation-->
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <p class="p-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-item">
-                                                        <div class="timeline-media">
-                                                            <i class="flaticon2-layers text-warning"></i>
-                                                        </div>
-                                                        <div class="timeline-content">
-                                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="mr-2">
-                                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold">System deployment has been completed.</a>
-                                                                    <span class="text-muted ml-2">11:00AM 30 June</span>
-                                                                    <span class="label label-light-warning font-weight-bolder label-inline ml-2">done</span>
-                                                                </div>
-                                                                <div class="dropdown ml-2" data-toggle="tooltip" title="Quick actions" data-placement="left">
-                                                                    <a href="#" class="btn btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                        <i class="ki ki-more-hor icon-md"></i>
-                                                                    </a>
-                                                                    <div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
-                                                                        <!--begin::Navigation-->
-                                                                        <ul class="navi navi-hover">
-                                                                            <li class="navi-header font-weight-bold py-4">
-                                                                                <span class="font-size-lg">Choose Label:</span>
-                                                                                <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-                                                                            </li>
-                                                                            <li class="navi-separator mb-3 opacity-70"></li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-success">Customer</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-danger">Partner</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-warning">Suplier</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-primary">Member</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-dark">Staff</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-separator mt-3 opacity-70"></li>
-                                                                            <li class="navi-footer py-4">
-                                                                                <a class="btn btn-clean font-weight-bold btn-sm" href="#">
-                                                                                <i class="ki ki-plus icon-sm"></i>Add new</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                        <!--end::Navigation-->
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <p class="p-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="timeline-item">
-                                                        <div class="timeline-media">
-                                                            <i class="flaticon2-notification fl text-primary"></i>
-                                                        </div>
-                                                        <div class="timeline-content">
-                                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="mr-2">
-                                                                    <a href="#" class="text-dark-75 text-hover-primary font-weight-bold">Database backup has been completed.</a>
-                                                                    <span class="text-muted ml-2">2 months ago</span>
-                                                                    <span class="label label-light-primary font-weight-bolder label-inline ml-2">delivered</span>
-                                                                </div>
-                                                                <div class="dropdown ml-2" data-toggle="tooltip" title="Quick actions" data-placement="left">
-                                                                    <a href="#" class="btn btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                        <i class="ki ki-more-hor icon-md"></i>
-                                                                    </a>
-                                                                    <div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
-                                                                        <!--begin::Navigation-->
-                                                                        <ul class="navi navi-hover">
-                                                                            <li class="navi-header font-weight-bold py-4">
-                                                                                <span class="font-size-lg">Choose Label:</span>
-                                                                                <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-                                                                            </li>
-                                                                            <li class="navi-separator mb-3 opacity-70"></li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-success">Customer</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-danger">Partner</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-warning">Suplier</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-primary">Member</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-item">
-                                                                                <a href="#" class="navi-link">
-                                                                                    <span class="navi-text">
-                                                                                        <span class="label label-xl label-inline label-light-dark">Staff</span>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="navi-separator mt-3 opacity-70"></li>
-                                                                            <li class="navi-footer py-4">
-                                                                                <a class="btn btn-clean font-weight-bold btn-sm" href="#">
-                                                                                <i class="ki ki-plus icon-sm"></i>Add new</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                        <!--end::Navigation-->
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <p class="p-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--end::Timeline-->
-                                        </div>
-                                    </div>
-                                    <!--end::Tab Content--> --}}
                                     <!--begin::Tab Content-->
                                     <div class="tab-pane active" id="kt_apps_contacts_view_tab_2" role="tabpanel">
                                         <form class="form">
@@ -809,7 +201,7 @@
                                                     <h3 class="font-size-h6 mb-5">بيانات العمبل</h3>
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
+                                            {{-- <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم ملف العميل</label>
                                                 <div class="col-lg-9 col-xl-6">
                                                     <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->file_number}}">
@@ -820,7 +212,7 @@
                                                 <div class="col-lg-9 col-xl-6">
                                                     <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->full_name}}">
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم الهوية</label>
                                                 <div class="col-lg-9 col-xl-6">
@@ -847,7 +239,7 @@
 
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
+                                            {{-- <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">مركز الشرطة</label>
                                                 <div class="col-lg-9 col-xl-6">
                                                     <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->police_office_id}}">
@@ -855,7 +247,7 @@
                                                 </div>
                                             </div>
 
-                                            {{-- <div class="form-group row">
+                                            <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">المحكمة</label>
                                                 <div class="col-lg-9 col-xl-6">
                                                     <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->Court->id}}">
@@ -863,56 +255,29 @@
                                                 </div>
                                             </div> --}}
 
-                                            {{-- <div class="separator separator-dashed my-10"></div> --}}
-                                            <!--begin::Heading-->
-                                        {{--<div class="row">
-                                                <div class="col-lg-9 col-xl-6 offset-xl-3">
-                                                    <h3 class="font-size-h6 mb-5">Contact Info:</h3>
-                                                </div>
-                                            </div>
-                                            <!--end::Heading-->
-                                            <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">Contact Phone</label>
-                                                <div class="col-lg-9 col-xl-6">
-                                                    <div class="input-group input-group-lg input-group-solid">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text">
-                                                                <i class="la la-phone"></i>
-                                                            </span>
-                                                        </div>
-                                                        <input type="text" class="form-control form-control-lg form-control-solid" value="+35278953712" placeholder="Phone">
-                                                    </div>
-                                                    <span class="form-text text-muted">We'll never share your email with anyone else.</span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">Email Address</label>
-                                                <div class="col-lg-9 col-xl-6">
-                                                    <div class="input-group input-group-lg input-group-solid">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text">
-                                                                <i class="la la-at"></i>
-                                                            </span>
-                                                        </div>
-                                                        <input type="text" class="form-control form-control-lg form-control-solid" value="nick.bold@loop.com" placeholder="Email">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right">Company Site</label>
-                                                <div class="col-lg-9 col-xl-6">
-                                                    <div class="input-group input-group-lg input-group-solid">
-                                                        <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Username" value="loop">
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text">.com</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> --}}
+                                            <div class="separator separator-dashed my-10"></div>
                                         </form>
                                     </div>
                                     <!--end::Tab Content-->
-                                    {{-- <!--begin::Tab Content-->
+                                    <!--begin::Tab Content-->
+                                    <div class="tab-pane active" id="kt_apps_contacts_view_tab_1" role="tabpanel">
+                                        <div class="container">
+                                            <form class="form">
+                                                <div class="form-group">
+                                                    <textarea class="form-control form-control-lg form-control-solid" id="exampleTextarea" rows="3" placeholder="Type notes"></textarea>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <a href="#" class="btn btn-light-primary font-weight-bold">Add notes</a>
+                                                        <a href="#" class="btn btn-clean font-weight-bold">Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="separator separator-dashed my-10"></div>
+                                        </div>
+                                    </div>
+                                    <!--end::Tab Content-->
+                                    <!--begin::Tab Content-->
                                     <div class="tab-pane" id="kt_apps_contacts_view_tab_3" role="tabpanel">
                                         <form class="form">
                                             <div class="row">
@@ -1222,8 +587,8 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <!--end::Tab Content--> --}}
-                                   {{--  <!--begin::Tab Content-->
+                                    <!--end::Tab Content-->
+                                    <!--begin::Tab Content-->
                                     <div class="tab-pane" id="kt_apps_contacts_view_tab_4" role="tabpanel">
                                         <form class="form">
                                             <!--begin::Heading-->
@@ -1327,7 +692,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <!--end::Tab Content--> --}}
+                                    <!--end::Tab Content-->
                                 </div>
                             </div>
                             <!--end::Body-->
