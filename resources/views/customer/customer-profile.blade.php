@@ -249,7 +249,7 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">المسمى الوظيفي </label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$work->jop_title}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$work->job_title}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -283,13 +283,13 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">البنك</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->name}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->bank->name}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">الفرع</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->Branch}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->branche->name}}">
 
                                                 </div>
                                             </div>

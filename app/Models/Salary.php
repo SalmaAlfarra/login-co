@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Bank;
+use App\Models\Branch;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -21,11 +23,19 @@ class Salary extends Model
 
     public function customer()
     {
-        return $this->hasOne(Customer::class);
+        return $this->belongsTo(Customer::class,'id');
+    }
+    public function bank()
+    {
+        return $this->belongsTo(Bank::class,'id');
+    }
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class,'id');
     }
 
     public function currency()
     {
-        return $this->hasOne(Currency::class);
+        return $this->belongsTo(Currency::class,'id');
     }
 }
