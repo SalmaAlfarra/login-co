@@ -2,18 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Imports\CustomersImport;
 use App\Models\Bank;
-use App\Models\Branch;
 use App\Models\City;
+use App\Models\Work;
 use App\Models\Court;
+use App\Models\Branch;
+use App\Models\Patron;
+use App\Models\Salary;
 use App\Models\Customer;
+use App\Models\Acquaintance;
 use App\Models\PoliceOffice;
 use Illuminate\Http\Request;
+use App\Models\MaterialStatus;
+use App\Imports\CustomersImport;
 use Illuminate\Routing\Controller;
-use Yajra\DataTables\Facades\DataTables;
-use Illuminate\Contracts\Support\Renderable;
 use Maatwebsite\Excel\Facades\Excel;
+use Yajra\DataTables\Facades\DataTables;
+use App\Models\CustomerPaymenteMechanisms;
+use Illuminate\Contracts\Support\Renderable;
 
 class CustomerController extends Controller
 {
@@ -125,10 +131,21 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-       
+
         $customer = Customer::find($id);
+
+        $material= MaterialStatus::where('customer_id',$id)->first();
+        $work= Work::where('customer_id',$id)->first();
+        $salary= Salary::where('customer_id',$id)->first();
+        $customerpaymentemechanisms= CustomerPaymenteMechanisms::where('customer_id',$id)->first();
+        $acquaintance= Acquaintance::where('customer_id',$id)->first();
         return view('customer.customer-profile', [
-            'customer' => $customer,
+            'customer'                       => $customer,
+            'material'                       => $material,
+            'work'                           => $work,
+            'salary'                         => $salary,
+            'acquaintance'                   => $acquaintance,
+            'customerpaymentemechanisms'     => $customerpaymentemechanisms,
         ]);
     }
 

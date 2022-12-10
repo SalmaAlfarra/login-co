@@ -21,7 +21,7 @@ class MaterialStatus extends Model
 
     public function customer()
     {
-        return $this->hasOne(Customer::class);
+        return $this->belongsTo(Customer::class,'id');
     }
 
     public function materialstatuslist()

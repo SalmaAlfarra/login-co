@@ -213,26 +213,26 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">الحالة الاجتماعية</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->MaterialStatus->marital_status}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$material->marital_status}}">
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">اسم الزوج/ة</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->MaterialStatus->partner_name}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$material->partner_name}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم جوال الزوج/ة</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->MaterialStatus->phone}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$material->phone}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">عنوان أهل الزوج/ة</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->MaterialStatus->partner_family_address}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$material->partner_family_address}}">
 
                                                 </div>
                                             </div>
@@ -247,26 +247,26 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">المسمى الوظيفي </label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->MaterialStatus->marital_status}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$work->jop_title}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">نوع الوظيفة</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->Work->job_type}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$Work->job_type}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">جهة العمل</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->Work->employer}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$Work->employer}}">
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">المرتب</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->salary->salary}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->salary}}">
 
                                                 </div>
                                             </div>
@@ -281,7 +281,7 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">البنك</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->salary->Bank->name}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->Bank->name}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -293,21 +293,21 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">الفرع</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->salary->Branch}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->Branch}}">
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم الحساب </label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->salary->bank_account_number}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->bank_account_number}}">
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">المرتب</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->salary->salary}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->salary}}">
 
                                                 </div>
                                             </div>
@@ -322,7 +322,7 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">الية السداد</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customerpaymentemechanisms->paymentMechanism->type}}">
                                                 </div>
                                             </div>
                                             <div class="separator separator-dashed my-10"></div>
@@ -336,33 +336,33 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">الاسم</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$acquaintance->name}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">صلة القرابة</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$acquaintance->relationship}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم الجوال</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$acquaintance->phone}}">
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">المدينة</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$acquaintance->city->name}}">
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">العنوان</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$acquaintance->address}}">
 
                                                 </div>
                                             </div>

@@ -109,7 +109,7 @@ class Customer extends Model
 
     public function material_status()
     {
-        return $this->hasOne(Material_Status::class);
+        return $this->hasOne(Material_Status::class,'id');
     }
 
     public function salary()
