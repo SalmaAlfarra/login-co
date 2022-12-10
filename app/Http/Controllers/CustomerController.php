@@ -137,7 +137,7 @@ class CustomerController extends Controller
         $material= MaterialStatus::where('customer_id',$id)->first();
         $work= Work::where('customer_id',$id)->first();
         $salary= Salary::where('customer_id',$id)->first();
-        $customerpaymentemechanisms= CustomerPaymenteMechanisms::where('customer_id',$id)->first();
+        // $customerpaymentemechanisms= CustomerPaymenteMechanisms::where('customer_id',$id)->first();
         $acquaintance= Acquaintance::where('customer_id',$id)->first();
         return view('customer.customer-profile', [
             'customer'                       => $customer,
@@ -145,7 +145,7 @@ class CustomerController extends Controller
             'work'                           => $work,
             'salary'                         => $salary,
             'acquaintance'                   => $acquaintance,
-            'customerpaymentemechanisms'     => $customerpaymentemechanisms,
+            // 'customerpaymentemechanisms'     => $customerpaymentemechanisms,
         ]);
     }
 

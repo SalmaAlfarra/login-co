@@ -57,7 +57,7 @@
                                         </div>
                                         <!--begin::Contacts-->
                                         <div class="d-flex flex-wrap my-2">
-                                            {{-- <a  class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
+                                            <a  class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
                                                 <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
                                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-notification.svg-->
                                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -70,7 +70,7 @@
                                                     <!--end::Svg Icon-->
                                                 </span>
                                                 david.s@loop.com
-                                            </a> --}}
+                                            </a>
                                             <a class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
                                             <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
                                                 <!--begin::Svg Icon | path:assets/media/svg/icons/General/Lock.svg-->
@@ -255,13 +255,13 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">نوع الوظيفة</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$Work->job_type}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$work->job_type}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">جهة العمل</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$Work->employer}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$work->employer}}">
 
                                                 </div>
                                             </div>
@@ -283,13 +283,7 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">البنك</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->Bank->name}}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-xl-3 col-lg-3 col-form-label text-right"></label>
-                                                <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->name}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
