@@ -67,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<h3 class="opacity-40 font-weight-normal">Sign In To Admin</h3>
 								<p class="opacity-40">Enter your details to login to your account:</p>
 							</div>
-							<form method="POST" action="{{route('login') }}" class="form" id="kt_login_signin_form">
+							<form method="POST" action="{{route('login')}}" class="form" >
 								@csrf
 								<div class="form-group">
 									<input class="form-control h-auto text-white bg-white-o-5 rounded-pill border-0 py-4 px-8" type="text" placeholder="Email" name="username" autocomplete="off" />
@@ -88,7 +88,7 @@ License: You must have a valid license purchased only from themeforest(the above
                						 @endif
 								</div>
 								<div class="form-group text-center mt-10">
-									<button id="kt_login_signin_submit" class="btn btn-pill btn-primary opacity-90 px-15 py-3">Sign In</button>
+									<button type="submit"  class="btn btn-pill btn-primary opacity-90 px-15 py-3">Sign In</button>
 								</div>
 							</form>
 							<div class="mt-10">
@@ -103,7 +103,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								<h3 class="opacity-40 font-weight-normal">Sign Up</h3>
 								<p class="opacity-40">Enter your details to create your account</p>
 							</div>
-							<form class="form text-center" id="kt_login_signup_form">
+							<form class="form text-center" action="{{ route('register') }}" method="POST" id="kt_login_signup_form">
+                                @csrf
 								<div class="form-group">
 									<input class="form-control h-auto text-white bg-white-o-5 rounded-pill border-0 py-4 px-8" type="text" placeholder="Fullname" name="fullname" />
 								</div>
