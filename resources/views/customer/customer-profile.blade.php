@@ -315,7 +315,7 @@
                                             </div>
                                             <div class="separator separator-dashed my-10"></div>
                                         </form>
-                                        <form class="form">
+                                        {{-- <form class="form">
                                             <div class="row">
                                                 <div class="col-lg-9 col-xl-6 offset-xl-3">
                                                     <h3 class="font-size-h6 mb-5">الية السداد</h3>
@@ -389,7 +389,7 @@
                                                 </div>
                                             </div>
                                             <div class="separator separator-dashed my-10"></div>
-                                        </form>
+                                        </form> --}}
                                     </div>
                                     <!--end::Tab Content-->
                                     <!--begin::Tab Content-->
