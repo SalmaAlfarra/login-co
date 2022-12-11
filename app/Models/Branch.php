@@ -19,10 +19,10 @@ class Branch extends Model
         'email'
     ];
 
-    public function customer()
+  /*   public function customer()
     {
         return $this->hasMany(Customer::class);
-    }
+    } */
 
     public function bank()
     {

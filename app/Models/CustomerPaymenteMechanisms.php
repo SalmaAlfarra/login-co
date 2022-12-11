@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\PaymentMechanism;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class CustomerPaymenteMechanisms extends Model
 {
@@ -18,5 +19,9 @@ class CustomerPaymenteMechanisms extends Model
     public function customer()
     {
         return $this->belongsTo(Customer::class);
+    }
+    public function paymentMechanism()
+    {
+        return $this->belongsTo(PaymentMechanism::class);
     }
 }

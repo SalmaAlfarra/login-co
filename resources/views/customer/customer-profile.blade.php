@@ -69,7 +69,7 @@
                                                     </svg>
                                                     <!--end::Svg Icon-->
                                                 </span>
-                                                david.s@loop.com
+                                                {{$phone->phone}}
                                             </a>
                                             <a class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
                                             <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
@@ -289,7 +289,7 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">الفرع</label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->branche->name}}">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$salary->Branch->name}}">
 
                                                 </div>
                                             </div>
@@ -309,18 +309,18 @@
                                             </div>
                                             <div class="separator separator-dashed my-10"></div>
                                         </form>
-                                        {{-- <form class="form">
+                                        <form class="form">
                                             <div class="row">
                                                 <div class="col-lg-9 col-xl-6 offset-xl-3">
                                                     <h3 class="font-size-h6 mb-5">الية السداد</h3>
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
+                                            {{-- <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">الية السداد</label>
                                                 <div class="col-lg-9 col-xl-6">
                                                     <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customerpaymentemechanisms->paymentMechanism->type}}">
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="separator separator-dashed my-10"></div>
                                         </form>
                                         <form class="form">
@@ -373,17 +373,17 @@
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">الاسم </label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$patron->full_name}}">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-right">رقم الملف </label>
                                                 <div class="col-lg-9 col-xl-6">
-                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="">
+                                                    <input class="form-control form-control-lg form-control-solid" type="text" value="{{$customer->file_number}}">
                                                 </div>
                                             </div>
                                             <div class="separator separator-dashed my-10"></div>
-                                        </form> --}}
+                                        </form>
                                     </div>
                                     <!--end::Tab Content-->
                                     <!--begin::Tab Content-->

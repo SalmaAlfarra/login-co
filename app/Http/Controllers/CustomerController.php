@@ -6,6 +6,7 @@ use App\Models\Bank;
 use App\Models\City;
 use App\Models\Work;
 use App\Models\Court;
+use App\Models\Phone;
 use App\Models\Branch;
 use App\Models\Patron;
 use App\Models\Salary;
@@ -137,15 +138,19 @@ class CustomerController extends Controller
         $material= MaterialStatus::where('customer_id',$id)->first();
         $work= Work::where('customer_id',$id)->first();
         $salary= Salary::where('customer_id',$id)->first();
-        // $customerpaymentemechanisms= CustomerPaymenteMechanisms::where('customer_id',$id)->first();
+        $phone= Phone::where('customer_id',$id)->first();
+        $customerpaymentemechanisms= CustomerPaymenteMechanisms::where('customer_id',$id);
         $acquaintance= Acquaintance::where('customer_id',$id)->first();
+        $patron= Patron::where('customer_id',$id)->first();
         return view('customer.customer-profile', [
             'customer'                       => $customer,
             'material'                       => $material,
             'work'                           => $work,
             'salary'                         => $salary,
             'acquaintance'                   => $acquaintance,
-            // 'customerpaymentemechanisms'     => $customerpaymentemechanisms,
+            'phone'                          => $phone,
+            'customerpaymentemechanisms'     => $customerpaymentemechanisms,
+            'patron'                         => $patron,
         ]);
     }
 

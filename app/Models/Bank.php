@@ -23,6 +23,6 @@ class Bank extends Model
     }
     public function salary()
     {
-        return $this->hasMany(Salary::class);
+        return $this->hasMany(Salary::class,);
     }
 }

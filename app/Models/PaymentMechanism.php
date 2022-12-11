@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\CustomerPaymenteMechanisms;
 
 class PaymentMechanism extends Model
 {
@@ -23,4 +24,9 @@ class PaymentMechanism extends Model
     {
         return $this->belongsToMany(Customer::class);
     }
+    public function customerpaymentemechanisms()
+    {
+        return $this->belongsToMany(CustomerPaymenteMechanisms::class);
+    }
+
 }

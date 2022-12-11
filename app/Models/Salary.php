@@ -23,19 +23,19 @@ class Salary extends Model
 
     public function customer()
     {
-        return $this->belongsTo(Customer::class,'id');
+        return $this->belongsTo(Customer::class,);
     }
     public function bank()
     {
-        return $this->belongsTo(Bank::class,'id');
+        return $this->belongsTo(Bank::class,);
     }
     public function branch()
     {
-        return $this->belongsTo(Branch::class,'id');
+        return $this->belongsTo(Branch::class,);
     }
 
     public function currency()
     {
-        return $this->belongsTo(Currency::class,'id');
+        return $this->belongsTo(Currency::class,);
     }
 }

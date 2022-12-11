@@ -79,7 +79,7 @@ class Customer extends Model
 
     public function court()
     {
-        return $this->belongsTo(Court::class);
+        return $this->belongsTo(Court::class,);
     }
 
     public function appointment()
@@ -89,12 +89,12 @@ class Customer extends Model
 
     public function city()
     {
-        return $this->belongsTo(City::class);
+        return $this->belongsTo(City::class,);
     }
 
     public function branch()
     {
-        return $this->belongsTo(Branch::class);
+        return $this->belongsTo(Branch::class,);
     }
 
     public function phone()
@@ -109,16 +109,16 @@ class Customer extends Model
 
     public function material_status()
     {
-        return $this->hasOne(Material_Status::class,'id');
+        return $this->hasOne(Material_Status::class,);
     }
 
     public function salary()
     {
-        return $this->hasOne(Salary::class);
+        return $this->hasOne(Salary::class,);
     }
 
     public function customer_payment_mechanism()
     {
-        return $this->hasOne(CustomerPaymentMechanisms::class);
+        return $this->hasOne(CustomerPaymentMechanisms::class,);
     }
 }
